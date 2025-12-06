@@ -1,8 +1,259 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --dd-dark-green: #10291D;
+  --dd-saffron: #F7C64A;
+  --dd-seasalt: #F7F7F7;
+  --dd-text-dark: #000000;
+  --dd-text-light: #F7F7F7;
 }
 
-a {
-  color: #00B7FF;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body.dd-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--dd-seasalt);
+  color: var(--dd-text-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.dd-header {
+  background-color: var(--dd-dark-green);
+  color: var(--dd-text-light);
+}
+
+.dd-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dd-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.dd-logo-mark {
+  font-size: 1.4rem;
+}
+
+.dd-logo-text {
+  font-family: "Italianno", cursive;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.dd-logo-sub {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.dd-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dd-logo-img {
+  width: 210px;
+  height: auto; 
+  object-fit: contain;
+}
+
+.dd-nav a {
+  color: var(--dd-text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dd-nav a:hover {
+  text-decoration: underline;
+}
+
+.dd-main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+.dd-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.dd-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.dd-hero-title {
+  font-size: clamp(2rem, 3vw + 1rem, 2.7rem);
+  line-height: 1.25;
+  margin: 0.5rem 0 1rem;
+}
+
+.dd-hero-text {
+  margin: 0 0 1.5rem;
+  max-width: 34rem;
+}
+
+.dd-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.dd-hero-hours {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* PAGE HEADER */
+.dd-page-header {
+  margin-bottom: 1.5rem;
+}
+
+.dd-page-title {
+  font-size: 2rem;
+  margin: 0 0 0.4rem;
+}
+
+.dd-page-subtitle {
+  margin: 0;
+  color: #555;
+  max-width: 36rem;
+  font-size: 0.95rem;
+}
+
+.dd-menu-intro {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.dd-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5rem;
+  justify-items: stretch;
+}
+
+.dd-menu-section {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #eee;
+  padding: 1.2rem 1.1rem;
+}
+
+.dd-menu-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.dd-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dd-menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.dd-menu-item-name {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.dd-menu-item-price {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.dd-menu-item-desc {
+  margin: 0.1rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.dd-menu-note {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .dd-menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.dd-footer {
+  background-color:var(--dd-dark-green);
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  text-align: center;   
+  color: white;
+}
+
+
+
+.dd-welcome-text {
+  font-family: "Italianno", cursive;
+  font-size: 2.8rem;  
+  color: var(--dd-dark-green);
+  font-weight: 400;
+}
+
+.dd-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dd-hero-img {
+  width: 720px;
+  max-width: 125%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dd-welcome {
+  margin-bottom: 0.5rem;
+}
+
+.dd-welcome-text {
+  font-family: "Italianno", cursive;
+  font-size: 2.8rem;
+  color: var(--dd-dark-green);
+  font-weight: 400;
+}
+
+.dd-menu-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

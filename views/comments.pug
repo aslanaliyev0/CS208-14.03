@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  section.dd-page-header
+    h1.dd-page-title Customer Comments
+    p.dd-page-subtitle
+      | Feel free to share anything about Downtown Donuts!
+      | That could be an idea, a suggestion, or feedback!
+
+  section.dd-comments-layout
+    .dd-comments-form-wrapper
+      h2 Leave a comment
+      form.dd-comments-form(method="POST", action="/comments")
+        .dd-form-group
+          label(for="name") Name
+          input#name(type="text", name="name", placeholder="Your name", required=true)
+
+        .dd-form-group
+          label(for="message") Comment
+          textarea#message(name="message", rows="5", placeholder="Enter Comment Here", required=true)
+
+        button.dd-btn.dd-btn-primary(type="submit") Post Comment
+
+
+    .dd-comments-list-wrapper
+      h2 Recent comments
+      if comments && comments.length
+        each comment in comments
+          article.dd-comment-card
+            header.dd-comment-header
+              span.dd-comment-name= comment.name
+              if comment.created_at
+                span.dd-comment-date= comment.created_at
+            p.dd-comment-message= comment.message
+      else
+        p.dd-comments-empty
+          | No comments yet

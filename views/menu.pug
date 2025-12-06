@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  section.dd-page-header
+    h1.dd-page-title Our Menu
+    p.dd-page-subtitle
+    | Fresh donuts + Hot Coffee. All made in house!
+
+  section.dd-menu-intro
+    p
+      | Here is our standard menu! Be on the lookout for in-store seasonal offerings!
+
+  section.dd-menu-grid
+    article.dd-menu-section
+      h2 Donuts
+      ul.dd-menu-list
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Glazed Ring
+            span.dd-menu-item-price $2.00
+          p.dd-menu-item-desc Our simple, soft yeast donut with a light vanilla glaze.
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Rainbow Sprinkle
+            span.dd-menu-item-price $2.25
+          p.dd-menu-item-desc Glazed ring with rainbow sprinkles.
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Maple Bar
+            span.dd-menu-item-price $2.50
+          p.dd-menu-item-desc Rectangular bar with maple icing.
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Old-Fashioned
+            span.dd-menu-item-price $2.00
+          p.dd-menu-item-desc Cake-style donut with a light glaze and crisp edges.
+
+    article.dd-menu-section
+      h2 Coffee & Drinks
+      ul.dd-menu-list
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Drip Coffee
+            span.dd-menu-item-price $1.99
+          p.dd-menu-item-desc Freshly brewed throughout the morning.
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Latte
+            span.dd-menu-item-price $5.00
+          p.dd-menu-item-desc Espresso with steamed milk. Available hot or iced.
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Cold Brew
+            span.dd-menu-item-price $4.00
+          p.dd-menu-item-desc Slow-steeped for a smooth, bold flavor.
+        li
+          .dd-menu-item-header
+            span.dd-menu-item-name Cappuccino
+            span.dd-menu-item-price $5.00
+          p.dd-menu-item-desc Espresso with thick milk foam and steamed milk
+        
+        section.dd-menu-image
+  img.dd-menu-banner(src="/images/menui.png")

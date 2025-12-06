@@ -1,7 +1,33 @@
 doctype html
-html
+html(lang="en")
   head
+    meta(charset="utf-8")
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    )
+
+    link(rel="stylesheet", href="/stylesheets/style.css")
+  body.dd-body
+    header.dd-header
+      .dd-header-inner
+        .dd-logo
+          img.dd-logo-img(src="/images/darkLogo.png", alt="Downtown Donuts Logo")
+        nav.dd-nav
+          a(href="/") Home
+          a(href="/menu") Menu
+          a(href="/about") About
+          a(href="/comments") Comments
+
+    main.dd-main
+      block content
+
+    footer.dd-footer
+      p ©2025 Downtown Donuts · All rights reserved.
+      p
+        | Contact: jdoe@downtowndonuts.com

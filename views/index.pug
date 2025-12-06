@@ -1,23 +1,56 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  ol
-  each val in todos
-    li
-      span= val.task + ' - '
-      if val.completed > 0
-        span Completed
-      else
-        pan Not Completed
-      form(method='POST' action='/delete')
-        input(type='hidden', name='id', value=val.id)
-        button(type='submit') Delete
+  section.dd-hero
+    .dd-hero-content
+      section.dd-welcome
+        h2.dd-welcome-text Welcome to Downtown Donuts
 
-  hr
-  h2 Add a new task
-  form(method='POST' action='/create')
-    label(for='task') Task:
-    input(type='text', name='task', id='task', required)
-    button(type='submit') Create Task
+      h1.dd-hero-title
+        | Fresh Donuts. Hot Coffee,
+        br
+        | Your New Favorite Stop.
+
+      p.dd-hero-text
+        | Come by and experience our fresh donuts made every morning along with our delicious coffee.
+        | Stop in whenever convenient or place an order online!
+
+      .dd-hero-actions
+        a.dd-btn.dd-btn-primary(href="/menu") View Our Menu
+        a.dd-btn.dd-btn-outline(href="#order-online") Order Online
+
+    .dd-hero-image
+      img.dd-hero-img(src="/images/Coffee-Donuts.jpg", alt="Coffee and donuts at Downtown Donuts")
+
+  section.dd-grid
+    article.dd-card
+      h2 Wide Variety of Donuts Made In-House Every Morning!
+      p
+        | Freshly + Hand Made Donuts, check out
+        | our menu to see our amazing offerings including our delicious coffee options
+      a.dd-link(href="/menu") Our Menu
+
+    article.dd-card
+      h2 About Downtown Donuts
+      p
+        | Downtown Donuts has been serving the community since 1992, 
+        | check out the about us page for more!
+      a.dd-link(href="/about") Find Out More About Us
+
+    article.dd-card
+      h2 Leave a comment
+      p
+        | Anything to share? Concerns, Comments, Ideas?
+        | Use this link to comment below!
+      a.dd-link(href="/comments") Share your thoughts →
+N
+  section.dd-order#order-online
+    .dd-order-inner
+      div
+        h2 Order online
+        p
+          | Order the best donuts + coffee online! We are now on UberEats + Doordash
+      .dd-order-links
+        a.dd-order-btn(href="https://www.ubereats.com/", target="_blank") Uber Eats 
+            .dd-order-links
+        a.dd-order-btn(href="http://doordash.com/", target="_blank") DoorDash
